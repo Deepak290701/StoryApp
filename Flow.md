@@ -36,8 +36,21 @@
 
 ✅ Made the nav bar for the dashboard.
 
-✅ Now Storeing the session of the login using mongostore.
+✅ Now Storing the session of the login using mongostore.
 
-✅ 
+✅ Made StoriesSchema for all the user 
+
+✅ Now sending stories for the user logged in to his 
+    dashbboard .
+
+✅
+
+✅
+
+✅
+
+✅
+
+✅
 
 ✅
