@@ -23,10 +23,17 @@
 ✅ Using default layout main for every file except login page
     , for login i'm using login.hbs layout in layouts folder 
     inside views folder .
+
+✅ Made the UserSchema in mongodb .
+
+✅ Connected the google sign with google+ api .
+
+✅ Now storing the incoming loging data into DB. 
+
 ✅ 
+
 ✅
+
 ✅
-✅
-✅
-✅
+
 ✅
