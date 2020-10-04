@@ -3,6 +3,8 @@ const dotenv = require('dotenv');
 const morgan  = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const passport = require('passport');
+const session = require('express-session');
 
 const connectDB = require('./config/db');
 const app = express();
@@ -10,8 +12,14 @@ const app = express();
 //Load Config Files
 dotenv.config({path : './config/config.env'});
 
+//Passport Config
+require('./config/passport')(passport);
+
+
+
 //Connectiong to database 
 connectDB();
+
 
 //Setting up morgan 
 if(process.env.NODE_ENV == 'development'){
@@ -26,6 +34,20 @@ if(process.env.NODE_ENV == 'development'){
 app.engine('.hbs', exphbs({defaultLayout : 'main' , extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+
+//session middleware
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}))
+
+//Passport middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+
+
 //Static Folders
 
 //What it does that it tells the templeate engine to search for OUR OWN EXTERNAL css and js files which we will include in views folder to look into public
@@ -35,7 +57,7 @@ app.use(express.static(path.join(__dirname,'public')))
 
 //Routes
 app.use('/' , require('./routes/index'));
-
+app.use('/auth' , require('./routes/auth'));
 
 
 const PORT = 3000 || process.env.PORT;
