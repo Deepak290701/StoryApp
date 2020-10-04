@@ -38,16 +38,18 @@
 
 ✅ Now Storing the session of the login using mongostore.
 
-✅ Made StoriesSchema for all the user 
+✅ Made the error show page for 500 and 404 error. 
+
+✅ Made StoriesSchema for all the user and is referenced to USER schema
 
 ✅ Now sending stories for the user logged in to his 
     dashbboard .
 
-✅
+✅ Added the functionality of adding story into the db.
 
-✅
+✅ converted text area to ckeditor using its cdn .
 
-✅
+✅ 
 
 ✅
 

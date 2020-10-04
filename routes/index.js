@@ -21,7 +21,7 @@ router.get('/dashboard' , ensureAuth, async (req,res) => {
 
     try{
         //.lean is used because for handlebar we fetch data with it
-        const stories = await Story.find({user : req.user.id}).lean()
+        const stories = await Story.find({user : req.user.id}).lean();
         
         res.render('dashboard' , {
             name : req.user.firstName,

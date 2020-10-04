@@ -1,6 +1,5 @@
 <h6>Dashboard</h6>
-<h4>Welcome {{name}} </h4>    
-<h6>Your Stories Are -> </h6>
+<h4>Welcome {{name}} </h4>   
 
 {{#if stories}}
     <table class="striped">
@@ -15,9 +14,9 @@
         <tbody>
             {{#each stories}}
                 <tr>
-                    <td><a href="/stories/{{stories._id}}"></a>{{stories.title}}</td>
-                    <td>{{stories.createdAt}}</td>
-                    <td><span class="dash-status">{{stories.status}}</span></td>
+                    <td><a href="/stories/{{id}}"></a>{{title}}</td>
+                    <td>{{createdAt}}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
                     <td></td>
                 </tr>
             {{/each}}
