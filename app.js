@@ -3,8 +3,10 @@ const dotenv = require('dotenv');
 const morgan  = require('morgan');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const mongoose = require('mongoose');
 const passport = require('passport');
 const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 
 const connectDB = require('./config/db');
 const app = express();
@@ -14,7 +16,6 @@ dotenv.config({path : './config/config.env'});
 
 //Passport Config
 require('./config/passport')(passport);
-
 
 
 //Connectiong to database 
@@ -39,7 +40,8 @@ app.set('view engine', '.hbs');
 app.use(session({
     secret: 'keyboard cat',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: false,
+    store : new MongoStore({mongooseConnection : mongoose.connection})
 }))
 
 //Passport middleware

@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router();
+const {ensureAuth,ensureGuest} = require('../middleware/auth');
 
 //Description of Route => Login Landing Page
 
-router.get('/',(req,res) => {
+router.get('/',ensureGuest,(req,res) => {
     //changin the layout from main to login
     //layouts are stored inside layouts folder in views folder 
     res.render('login' , {
@@ -12,7 +13,7 @@ router.get('/',(req,res) => {
 })
 
 //Description of Route => Dashboard Page
-router.get('/dashboard' , (req,res) => {
+router.get('/dashboard' , ensureAuth, (req,res) => {
     res.render('dashboard');
 })
 

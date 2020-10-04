@@ -30,10 +30,14 @@
 
 ✅ Now storing the incoming loging data into DB. 
 
+✅ Protected the routes by passing through middleware check.
+
+✅ Redirecting to dashboard page if already registered.
+
+✅ Made the nav bar for the dashboard.
+
+✅ Now Storeing the session of the login using mongostore.
+
 ✅ 
-
-✅
-
-✅
 
 ✅

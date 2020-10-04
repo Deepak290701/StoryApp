@@ -3,7 +3,6 @@ const router = express.Router();
 const passport = require('passport');
 
 //Description of Route => Authenticate with Google
-
 router.get('/google', passport.authenticate('google',{scope : ['profile','email']}))
 
 
