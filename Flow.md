@@ -1,34 +1,34 @@
 ✅ Make the server with the help of the express.js.
 
-✅ Make the New Project in MongoDB Atlas and create a new 
-    cluster for that project.
+✅ Make the New Project in MongoDB Atlas and create a new
+cluster for that project.
 
-✅ Make the Config Folder and store all the Configuration 
-    Details in config.env file.
+✅ Make the Config Folder and store all the Configuration
+Details in config.env file.
 
 ✅ Connect to the Database using mongoose all the connection
-    in config folder and db.js
+in config folder and db.js
 
 ✅ Set up morgan to log all the requests
 
-✅ Set up the templeate engine i.e. handlebars 
+✅ Set up the templeate engine i.e. handlebars
 
 ✅ Created the routes and views folder and seeting up routes
- 
-✅ Made public the static folder i.e. all the css and js we 
-    want to implement ourself .
+
+✅ Made public the static folder i.e. all the css and js we
+want to implement ourself .
 
 ✅ Using Materialize and font awesome through cdn
 
 ✅ Using default layout main for every file except login page
-    , for login i'm using login.hbs layout in layouts folder 
-    inside views folder .
+, for login i'm using login.hbs layout in layouts folder
+inside views folder .
 
 ✅ Made the UserSchema in mongodb .
 
 ✅ Connected the google sign with google+ api .
 
-✅ Now storing the incoming loging data into DB. 
+✅ Now storing the incoming loging data into DB.
 
 ✅ Protected the routes by passing through middleware check.
 
@@ -38,21 +38,22 @@
 
 ✅ Now Storing the session of the login using mongostore.
 
-✅ Made the error show page for 500 and 404 error. 
+✅ Made the error show page for 500 and 404 error.
 
 ✅ Made StoriesSchema for all the user and is referenced to USER schema
 
-✅ Now sending stories for the user logged in to his 
-    dashbboard .
+✅ Now sending stories for the user logged in to his
+dashbboard .
 
 ✅ Added the functionality of adding story into the db.
 
 ✅ converted text area to ckeditor using its cdn .
 
+✅ Added the functionality of showing user specific data .
+
+✅ Added the handlebars helper to show date in formatted
+    manner using moment
+
 ✅ 
-
-✅
-
-✅
 
 ✅

@@ -14,8 +14,11 @@
         <tbody>
             {{#each stories}}
                 <tr>
+                    {{!-- title = stories.title because of #each looping --}}
                     <td><a href="/stories/{{id}}"></a>{{title}}</td>
-                    <td>{{createdAt}}</td>
+                    {{!-- formatDate(date,format) here in looping dont use () therefore space --}}
+                    {{!-- {{formatDate createdAt 'MMMM Do YYYY , h:mm:ss a'}} as helper formatDate will send createdAt as date and 'MMMM..'  as format to the paramters--}}
+                    <td>{{formatDate createdAt 'MMMM Do YYYY,h:mm:ss a'}}</td>
                     <td><span class="dash-status">{{status}}</span></td>
                     <td></td>
                 </tr>
@@ -24,6 +27,7 @@
     </table>
 
 {{else}}
+    <hr>
     <p>You have not created any stories!!!</p>
 
 {{/if}}

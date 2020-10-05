@@ -30,12 +30,23 @@ if(process.env.NODE_ENV == 'development'){
     app.use(morgan('dev'));
 }
 
+
+//Handlebars Helpers
+const {formatDate} = require('./helper/hbs');
+
+
 //setting up the view engine
 //seeting the .hbs extension instead of .handlebars extension
 //default layout is main.hbs
 // All the layouts i.e. which are used in many files are to keept inside layouts folder like here we want
 //different layout for login page therefor, we will make a different layout in layouts folder with name login
-app.engine('.hbs', exphbs({defaultLayout : 'main' , extname: '.hbs'}));
+app.engine('.hbs', exphbs({ 
+    helpers : {
+        formatDate
+    },
+    defaultLayout : 'main',
+    extname: '.hbs'
+}));
 app.set('view engine', '.hbs');
 
 
