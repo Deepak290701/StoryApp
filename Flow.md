@@ -1,9 +1,9 @@
-✅ Make the server with the help of the express.js.
+✅ Made the server with the help of the express.js.
 
-✅ Make the New Project in MongoDB Atlas and create a new
+✅ Made the New Project in MongoDB Atlas and create a new
 cluster for that project.
 
-✅ Make the Config Folder and store all the Configuration
+✅ Made the Config Folder and store all the Configuration
 Details in config.env file.
 
 ✅ Connect to the Database using mongoose all the connection
@@ -60,4 +60,9 @@ dashbboard .
     handlebar heplers and converting html to plain text using
     regex .
 
-✅ 
+✅ Added edit button to public stories and made all the 
+    stories of the user on dashboard to link to show the story.
+
+✅ Added the before values  into the edit .
+
+✅ Update the storied in db .

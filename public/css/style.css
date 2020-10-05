@@ -15,3 +15,6 @@ nav li .logout{
     margin-right: 170px;
     margin-left: 18px;
 }
+.fa-small{
+    font-size : 15px !important;
+}

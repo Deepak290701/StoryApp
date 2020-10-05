@@ -15,7 +15,7 @@
             {{#each stories}}
                 <tr>
                     {{!-- title = stories.title because of #each looping --}}
-                    <td><a href="/stories/{{id}}"></a>{{title}}</td>
+                    <td><a href="/stories/{{_id}}">{{title}}</a></td>
                     {{!-- formatDate(date,format) here in looping dont use () therefore space --}}
                     {{!-- {{formatDate createdAt 'MMMM Do YYYY , h:mm:ss a'}} as helper formatDate will send createdAt as date and 'MMMM..'  as format to the paramters--}}
                     <td>{{formatDate createdAt 'MMMM Do YYYY,h:mm:ss a'}}</td>

@@ -6,7 +6,12 @@
             <div class="col s12 m4">
                 <div class="card">
                     <div class="card-image">
-                        {{!-- todo : editIcon --}}
+                        {{!-- Since user Referes to stories.user and we need logged user which is in request --}}
+                        {{!-- and accessed outside of each loop but it is not accessible here  --}}
+                        {{!-- ../user this means look one level up and then also it will throw error --}}
+                        {{!-- Because we don't have access to it therefore we declare global variable users which it refers to  --}}
+                        {{{editIcon user ../user _id }}}
+
                     </div>
                     <div class="card-content center-align">
                         <h5>{{title}}</h5>
