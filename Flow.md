@@ -54,6 +54,10 @@ dashbboard .
 ✅ Added the handlebars helper to show date in formatted
     manner using moment
 
-✅ 
+✅ Now displaying stories with public tag in public stories.
 
-✅
+✅ Truncate all the long message to dispay inside card with 
+    handlebar heplers and converting html to plain text using
+    regex .
+
+✅ 

@@ -32,7 +32,7 @@ if(process.env.NODE_ENV == 'development'){
 
 
 //Handlebars Helpers
-const {formatDate} = require('./helper/hbs');
+const {formatDate,truncate,stripTags} = require('./helper/hbs');
 
 
 //setting up the view engine
@@ -42,7 +42,7 @@ const {formatDate} = require('./helper/hbs');
 //different layout for login page therefor, we will make a different layout in layouts folder with name login
 app.engine('.hbs', exphbs({ 
     helpers : {
-        formatDate
+        formatDate,stripTags,truncate
     },
     defaultLayout : 'main',
     extname: '.hbs'
