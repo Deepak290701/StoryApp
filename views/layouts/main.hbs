@@ -18,7 +18,7 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.15.0/ckeditor.js" integrity="sha512-bNMnTgKRxN1n+5rgfcf160HT2koHRcwLcSq/3JDOY9R65mja48E4Hh+a+IQXVaY2NoJCVC+pr0qE3Vz194QwnA==" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
     <script>
         //This is to activate side nav bar on hamburger click
         M.Sidenav.init(document.querySelector('.sidenav'));
@@ -28,9 +28,8 @@
 
         //body is the name of the text area in the add.hbs
         //Its CDN has been inserted above 
-        CKEDITOR.replace('body' ,{
-            plugins : 'wysiwygarea , toolbar , basicstyles, link'
-        })
+        CKEDITOR.replace('body');
+
 
     </script>
 </body>

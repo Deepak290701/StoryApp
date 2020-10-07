@@ -26,3 +26,6 @@ nav li .logout{
     font-size: x-large !important;
     margin: 5px;
 }
+.img-small{
+    width: 180px;
+}

@@ -66,3 +66,11 @@ dashbboard .
 ✅ Added the before values  into the edit .
 
 ✅ Update the storied in db .
+
+✅ Added the edit button and delete button on the dashboard .
+
+✅ Added the functionality of updating database .
+
+✅ Made the story page for a particular story .
+
+✅ Added the functionality of showing the stories of a particular user .

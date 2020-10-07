@@ -40,6 +40,28 @@ router.get('/',ensureAuth , async (req,res)=>{
     }
 });
 
+//Show single story
+router.get('/:id' , async (req,res) =>{
+    try{
+        let story = await Story.findById(req.params.id)
+                                .populate('user')
+                                .lean()
+        if(!story){
+            return res.render('error/404');
+        }
+        
+        res.render('stories/show' , {
+            story
+        })
+
+    }
+    catch(err){
+        console.log(err)
+        res.render('error/404');
+    }
+})
+
+
 // showing the edit story
 router.get( '/edit/:id' ,ensureAuth , async (req,res) => {
     try{
@@ -109,6 +131,30 @@ router.delete('/:id' , ensureAuth , async (req,res) => {
         return res.redirect('error/500');
     }
 });
+
+
+//User Stories
+router.get('/user/:userId' , ensureAuth , async (req,res) => {
+    try{
+        const stories = await Story.find({    
+            user : req.params.userId,
+            status : 'public'
+        })
+        .populate('user')
+        .lean()
+
+        res.render('index' , {
+            stories
+        })
+        
+    }
+    catch(err) {
+        console.log(err);
+        res.render('error/500');
+    }
+})
+
+
 
 
 module.exports = router;
